@@ -16,12 +16,12 @@ MotorCtrl control;
 CanClass can;
 
 extern "C" {
-	TIM_HandleTypeDef htim1;
-	TIM_HandleTypeDef htim2;
-	TIM_HandleTypeDef htim3;
+	extern TIM_HandleTypeDef htim1;
+	extern TIM_HandleTypeDef htim2;
+	extern TIM_HandleTypeDef htim3;
 
-	ADC_HandleTypeDef hadc1;
-	ADC_HandleTypeDef hadc2;
+	extern ADC_HandleTypeDef hadc1;
+	extern ADC_HandleTypeDef hadc2;
 
 	void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc){
 		int32_t data = HAL_ADCEx_InjectedGetValue(hadc,2) - HAL_ADCEx_InjectedGetValue(hadc,1);

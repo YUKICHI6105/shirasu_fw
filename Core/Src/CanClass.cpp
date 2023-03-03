@@ -9,7 +9,7 @@
 #include "main.h"
 
 extern "C" {
-	CAN_HandleTypeDef hcan;
+	extern CAN_HandleTypeDef hcan;
 };
 
 CanClass::CanClass()
